@@ -1,3 +1,7 @@
 <resources>
     <string name="app_name">eseFilm</string>
+    <string name="b1">invia</string>
+    <string name="f1">Spiderman: no way home</string>
+    <string name="f2">Batman</string>
+    <string name="f3">Superman</string>
 </resources>

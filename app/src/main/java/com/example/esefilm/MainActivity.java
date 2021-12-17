@@ -2,6 +2,7 @@ package com.example.esefilm;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.ArrayAdapter;
@@ -17,16 +18,17 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        l1=(ListView) findViewById(R.id.l1);
-        ArrayAdapter<String> adattatore= new ArrayAdapter<String>(this, android.R.layout.simple_list_item_1, Film);
-        l1.setAdapter(adattatore);
         b1=(Button)findViewById(R.id.b1);
         b1.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Toast.makeText(getApplicationContext(), "Vuoi uscire", Toast.LENGTH_LONG).show();
+                play(v);
             }
         });
 
+    }
+    public void play(View r){
+        Intent i=new Intent(getApplicationContext(), vistafilm.class);
+        startActivity(i);
     }
 }
